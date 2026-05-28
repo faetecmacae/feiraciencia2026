@@ -96,7 +96,7 @@ Seu trabalho foi muito importante para os estudos sobre o vírus e para o avanç
   </div>
 <!-- Project Section -->
   <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projetos</h3>
   </div>
 
   <div class="w3-row-padding">
@@ -166,6 +166,29 @@ Seu trabalho foi muito importante para os estudos sobre o vírus e para o avanç
         <i class="fa fa-paper-plane"></i> SEND MESSAGE
       </button>
     </form>
+  <body>
+    <h2>Enviar mensagem</h2>
+
+    <input type="text" id="nome" placeholder="Nome" /><br />
+    <input type="text" id="telefone" placeholder="Telefone" /><br />
+    <textarea id="mensagem" placeholder="Mensagem"></textarea><br />
+
+    <button onclick="enviar()">Enviar</button>
+
+    <script>
+      function enviar() {
+        let nome = document.getElementById("nome").value;
+        let telefone = document.getElementById("telefone").value;
+        let mensagem = document.getElementById("mensagem").value;
+
+        let texto = `Nome: ${nome}%0A Telefone: ${telefone}%0A Mensagem: ${mensagem}`;
+
+        let url = "https://wa.me/5522992489562?text=" + texto;
+
+        window.open(url);
+      }
+    </script>
+  </body>
   </div>
   
 <!-- Image of location/map -->
