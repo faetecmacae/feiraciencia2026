@@ -166,29 +166,71 @@ Seu trabalho foi muito importante para os estudos sobre o vírus e para o avanç
         <i class="fa fa-paper-plane"></i> SEND MESSAGE
       </button>
     </form>
-  <body>
-    <h2>Enviar mensagem</h2>
+  <!-- Contact Section -->
+<div class="w3-container w3-padding-32" id="contact">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+    Contato
+  </h3>
 
-    <input type="text" id="nome" placeholder="Nome" /><br />
-    <input type="text" id="telefone" placeholder="Telefone" /><br />
-    <textarea id="mensagem" placeholder="Mensagem"></textarea><br />
+  <p>Fale conosco pelo WhatsApp.</p>
 
-    <button onclick="enviar()">Enviar</button>
+  <form onsubmit="enviarWhats(event)">
+    
+    <input class="w3-input w3-border"
+      type="text"
+      id="nome"
+      placeholder="Nome"
+      required>
 
-    <script>
-      function enviar() {
-        let nome = document.getElementById("nome").value;
-        let telefone = document.getElementById("telefone").value;
-        let mensagem = document.getElementById("mensagem").value;
+    <input class="w3-input w3-section w3-border"
+      type="email"
+      id="email"
+      placeholder="Email"
+      required>
 
-        let texto = `Nome: ${nome}%0A Telefone: ${telefone}%0A Mensagem: ${mensagem}`;
+    <input class="w3-input w3-section w3-border"
+      type="text"
+      id="assunto"
+      placeholder="Assunto"
+      required>
 
-        let url = "https://wa.me/5522992489562?text=" + texto;
+    <input class="w3-input w3-section w3-border"
+      type="text"
+      id="mensagem"
+      placeholder="Mensagem"
+      required>
 
-        window.open(url);
-      }
-    </script>
-  </body>
+    <button class="w3-button w3-black w3-section" type="submit">
+      ENVIAR NO WHATSAPP
+    </button>
+
+  </form>
+</div>
+
+<script>
+function enviarWhats(event) {
+  event.preventDefault();
+
+  let nome = document.getElementById("nome").value;
+  let email = document.getElementById("email").value;
+  let assunto = document.getElementById("assunto").value;
+  let mensagem = document.getElementById("mensagem").value;
+
+  let texto =
+`Olá, vim pelo site!
+
+Nome: ${nome}
+Email: ${email}
+Assunto: ${assunto}
+Mensagem: ${mensagem}`;
+
+  let numero = "5522999999999";
+
+  let url = https://wa.me/${numero}?text=${encodeURIComponent(texto)};
+
+  window.open( url, "_blank");
+}
+</script>
   </div>
   
 <!-- Image of location/map -->
