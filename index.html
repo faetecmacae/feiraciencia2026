@@ -233,7 +233,31 @@ Mensagem: ${mensagem}`;
 
 <!-- End page content -->
 </div>
+<h2>Enviar mensagem</h2>
 
+<input type="text" id="nome" placeholder="Nome"><br>
+<input type="text" id="telefone" placeholder="Telefone"><br>
+<textarea id="mensagem" placeholder="Mensagem"></textarea><br>
+
+<button onclick="enviar()">Enviar</button>
+
+<script>
+
+function enviar(){
+
+let nome = document.getElementById("nome").value;
+let telefone = document.getElementById("telefone").value;
+let mensagem = document.getElementById("mensagem").value;
+
+let texto = Nome: ${nome}%0A Telefone: ${telefone}%0A Mensagem: ${mensagem};
+
+let url = "https://wa.me/55SEUNUMERO?text=" + texto;
+
+window.open(url);
+
+}
+
+</script>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
