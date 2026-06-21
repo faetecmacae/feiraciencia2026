@@ -1,305 +1,485 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<title>Feira De Ciencias</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Feira de Ciencias - 2026</title>
 </head>
 <body>
+  <!-- Sessão de navegação do site -->
+  <section class="navbar-container">
+    <div class="navbar">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><img src="img/log.jpeg" alt="faetec" width="150" height="50" > </a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Projetos</a>
-      <a href="#about" class="w3-bar-item w3-button">Sobre</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contato</a>
+      <img src="imagem/logoFaetec.png" alt="Logo" width="150">
+
+      <!-- MENU DESKTOP -->
+      <div class="menu-desktop">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#programacao">Programação</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#fotos">Fotos</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+        <!-- BOTÃO HAMBÚRGUER -->
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
     </div>
-  </div>
-</div>
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Fechar Menu</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
-    <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button">Projetos</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Sobre</a>
-   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Contato</a>
-</nav>
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    
-  </div>
-</div>
-<!-- Header -->
-<br><br><br><br><header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="img/prim.jpeg" alt="Architecture" width="1500" height="800">
-  
-</header>
 
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+    <!-- MENU MOBILE -->
+    <div id="menuMobile" class="menu-mobile">
+      <a href="#inicio" onclick="toggleMenu()">Início</a>
+      <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+      <a href="#programacao" onclick="toggleMenu()">Programação</a>
+      <a href="#projetos" onclick="toggleMenu()">Projetos</a>
+      <a href="#fotos" onclick="toggleMenu()">Fotos</a>
+      <a href="#contato" onclick="toggleMenu()">Contato</a>
+    </div>
+  </section>
 
-  
+  <!-- Sessão Inicio + data -->
+  <header id="inicio" class="w3-display-container w3-content w3-wide header-evento">
+    <img class="w3-image imagem-evento" src="imagem/prim.jpeg" alt="Architecture">
 
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sobre</h3>
-    <p>Introdução </p>
+    <section class="conteudo-evento">
 
-<p > participação das mulheres na ciência foi essencial para o avanço da humanidade. Mesmo enfrentando preconceitos, desigualdade e falta de oportunidades durante muitos anos, diversas mulheres contribuíram com descobertas que transformaram o mundo.
+      <!-- Título -->
+      <h1 class="titulo-evento">
+        Feira de Ciências e Tecnologia 2026
+      </h1>
 
-Atualmente, as mulheres estão presentes em áreas como medicina, astronomia, química, física, matemática, engenharia, tecnologia e robótica. O projeto “A Ciência Delas” tem como objetivo mostrar a importância dessas cientistas, inspirando novas gerações a acreditarem no conhecimento, na pesquisa e na inovação.
-</p>
-
-<p>A História das Mulheres na Ciência</p>
-
-<p> Durante grande parte da história, as mulheres não podiam frequentar universidades ou participar oficialmente de pesquisas científicas. Muitas vezes, seus trabalhos eram ignorados ou recebiam crédito em nome de homens.
-
-Mesmo diante dessas dificuldades, várias mulheres conseguiram deixar sua marca na ciência. Elas provaram que inteligência, criatividade e dedicação não dependem de gênero.
-
-Hoje, as mulheres conquistam cada vez mais espaço em universidades, laboratórios, empresas de tecnologia e centros de pesquisa ao redor do mundo.</p>
-    </p>
-  </div>
-
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="img/marie.jpeg" alt="John" style="width:100%">
-      <h3>Marie Curie</h3>
-      <p class="w3-opacity">Física e Quimíca</p>
-      <p>
-        Marie Curie foi uma física e química muito importante para a história da ciência. Ela descobriu os elementos rádio e polônio e realizou pesquisas sobre a radioatividade.
-        Foi a primeira mulher a ganhar um Prêmio Nobel e também a primeira pessoa a receber dois Nobel em áreas diferentes, Física e Química.
+      <!-- Data -->
+      <p class="data-evento">
+        XX de Outubro de 2026 — horário a definir
       </p>
-      <p><button class="w3-button w3-light-grey w3-block" onclick="window.open('https://pt.wikipedia.org/wiki/Marie_Curie', '_blank')">Saiba mais</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="img/ada.jpeg" alt="Jane" style="width:100%">
-      <h3>Ada Lovelace</h3>
-      <p class="w3-opacity">Matemática e Escritora</p>
-      <p>Ada Lovelace é considerada a primeira programadora da história. Ela criou ideias que serviram de base para os computadores atuais, muito antes da tecnologia moderna existir.
 
-Seu trabalho inspirou o desenvolvimento da programação e da computação, áreas fundamentais no mundo atual.</p>
-      <p><button class="w3-button w3-light-grey w3-block" onclick="window.open('https://pt.wikipedia.org/wiki/Ada_Lovelace', '_blank')">Saiba mais</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="img/kate.jpeg" alt="Mike" style="width:100%">
-      <h3>Katherine Johnson</h3>
-      <p class="w3-opacity">Matemática e Fisíca</p>
-      <p>Katherine Johnson foi uma matemática da NASA responsável pelos cálculos das missões espaciais americanas.
+      <!-- Botão -->
+      <a href="SEU_LINK_AQUI" target="_blank" class="formulario-btn">
+        Formulário de Avaliação →
+      </a>
 
-Seu trabalho ajudou astronautas a chegarem ao espaço com segurança. Ela se tornou um símbolo da importância das mulheres e das mulheres negras na ciência.</p>
-      <p><button class="w3-button w3-light-grey w3-block" onclick="window.open('https://pt.wikipedia.org/wiki/Katherine_Johnson', '_blank')">Saiba mais</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="img/jaque.jpeg" alt="Dan" style="width:100%">
-      <h3>Jaqueline Goes de Jesus</h3>
-      <p class="w3-opacity">Biomédica</p>
-      <p>Jaqueline Goes de Jesus é uma cientista brasileira reconhecida mundialmente por participar do sequenciamento do coronavírus no Brasil durante a pandemia da COVID-19.
+    </section>
+  </header>
 
-Seu trabalho foi muito importante para os estudos sobre o vírus e para o avanço das pesquisas científicas no país.</p>
-      <p><button class="w3-button w3-light-grey w3-block" onclick="window.open('https://pt.wikipedia.org/wiki/Jaqueline_Goes_de_Jesus', '_blank')">Saiba mais</button></p>
-    </div>
-  </div>
-<!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projetos</h3>
-  </div>
+  <!-- Sessão sobre -->
+  <section id="sobre" class="secao-sobre w3-content w3-padding">
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Técnico MSI</div><br><br>
-        <div style="color:black">À Definir </div>
+    <div class="w3-container w3-padding-32">
+      <h3 class="titulo-secao w3-border-bottom w3-border-light-grey w3-padding-16">
+        Sobre
+      </h3>
+
+      <p>Introdução</p>
+
+      <p>
+        A participação das mulheres na ciência foi essencial para o avanço da
+        humanidade. Mesmo enfrentando preconceitos, desigualdade e falta de
+        oportunidades durante muitos anos, diversas mulheres contribuíram com
+        descobertas que transformaram o mundo. Atualmente, as mulheres estão
+        presentes em áreas como medicina, astronomia, química, física,
+        matemática, engenharia, tecnologia e robótica. O projeto "A Ciência
+        Delas" tem como objetivo mostrar a importância dessas cientistas,
+        inspirando novas gerações a acreditarem no conhecimento, na pesquisa e
+        na inovação.
+      </p>
+
+      <p>A História das Mulheres na Ciência</p>
+
+      <p>
+        Durante grande parte da história, as mulheres não podiam frequentar
+        universidades ou participar oficialmente de pesquisas científicas.
+        Muitas vezes, seus trabalhos eram ignorados ou recebiam crédito em nome
+        de homens. Mesmo diante dessas dificuldades, várias mulheres conseguiram
+        deixar sua marca na ciência. Elas provaram que inteligência,
+        criatividade e dedicação não dependem de gênero. Hoje, as mulheres
+        conquistam cada vez mais espaço em universidades, laboratórios,
+        empresas de tecnologia e centros de pesquisa ao redor do mundo.
+      </p>
+    </div>
+
+    <div class="w3-row-padding w3-grayscale">
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="imagem/marie.jpeg" alt="Marie Curie" class="cientista-img">
+
+        <h3>Marie Curie</h3>
+        <p class="w3-opacity">Física e Química</p>
+
+        <p>
+          Marie Curie foi uma física e química muito importante para a história da ciência. Ela descobriu 
+          os elementos rádio e polônio e realizou pesquisas sobre a radioatividade. Foi a primeira mulher a ganhar 
+          um Prêmio Nobel e também a primeira pessoa a receber dois Nobel em áreas diferentes, Física e Química.
+        </p>
+
+        <p>
+          <button class="btn-saiba-mais"
+            onclick="window.open('https://pt.wikipedia.org/wiki/Marie_Curie', '_blank')">
+            Saiba mais
+          </button>
+        </p>
+      </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="imagem/ada.jpeg" alt="Ada Lovelace" class="cientista-img">
+
+        <h3>Ada Lovelace</h3>
+        <p class="w3-opacity">Matemática e Escritora</p>
+
+        <p>
+          Ada Lovelace é considerada a primeira programadora da história. Ela criou ideias que serviram de base 
+          para os computadores atuais, muito antes da tecnologia moderna existir. Seu trabalho inspirou o 
+          desenvolvimento da programação e da computação, áreas fundamentais no mundo.
+        </p>
+
+        <p>
+          <button class="btn-saiba-mais"
+            onclick="window.open('https://pt.wikipedia.org/wiki/Ada_Lovelace', '_blank')">
+            Saiba mais
+          </button>
+        </p>
+      </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="imagem/kate.jpeg" alt="Katherine Johnson" class="cientista-img">
+
+        <h3>Katherine Johnson</h3>
+        <p class="w3-opacity">Matemática e Física</p>
+
+        <p>
+          Katherine Johnson foi uma matemática da NASA responsável pelos cálculos das missões espaciais 
+          americanas. Seu trabalho ajudou astronautas a chegarem ao espaço com segurança. Ela se tornou um 
+          símbolo da importância das mulheres e das mulheres negras na ciência.
+        </p>
+
+        <p>
+          <button class="btn-saiba-mais"
+            onclick="window.open('https://pt.wikipedia.org/wiki/Katherine_Johnson', '_blank')">
+            Saiba mais
+          </button>
+        </p>
+      </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="imagem/jaque.jpeg" alt="Jaqueline Goes de Jesus" class="cientista-img">
+
+        <h3>Jaqueline Goes de Jesus</h3>
+        <p class="w3-opacity">Biomédica</p>
+
+        <p>
+          Jaqueline Goes de Jesus é uma cientista brasileira reconhecida mundialmente por participar do 
+          sequenciamento do coronavírus no Brasil durante a pandemia da COVID-19. Seu trabalho foi muito 
+          importante para os estudos sobre o vírus e para o avanço das pesquisas científicas no país.
+        </p>
+
+        <p>
+          <button class="btn-saiba-mais"
+            onclick="window.open('https://pt.wikipedia.org/wiki/Jaqueline_Goes_de_Jesus', '_blank')">
+            Saiba mais
+          </button>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sessão da programação -->
+  <section id="programacao" class="w3-content programacao-section">
+
+    <!-- TÍTULO -->
+    <div class="programacao-cabecalho">
+
+      <h2 class="programacao-titulo">
+        Programação
+      </h2>
+
+      <p class="programacao-subtitulo">
+        Confira os horários das atividades da Feira de Ciências e Tecnologia 2026
+      </p>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- CONTEÚDO -->
+    <div class="programacao-container">
+
+      <div class="programacao-grid">
+
+        <!-- Abertura -->
+        <div class="programacao-card">
+          <div class="programacao-icone">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+
+          <h3 class="programacao-card-titulo">
+            Abertura
+          </h3>
+
+          <p class="programacao-horario">
+            A Definir
+          </p>
+        </div>
+
+        <!-- Palestra -->
+        <div class="programacao-card">
+          <div class="programacao-icone">
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+
+          <h3 class="programacao-card-titulo">
+            Palestra
+          </h3>
+
+          <p class="programacao-horario">
+            A Definir
+          </p>
+        </div>
+
+        <!-- Visita -->
+        <div class="programacao-card">
+          <div class="programacao-icone">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+
+          <h3 class="programacao-card-titulo">
+            Visita Guiada à Exposição
+          </h3>
+
+          <p class="programacao-horario">
+            A Definir
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sessão de projetos -->
+  <section id="projetos" class="w3-content projetos-section">
+
+    <div class="projetos-cabecalho">
+      <h2 class="projetos-titulo">
+        Projetos
+      </h2>
+
+      <p class="projetos-subtitulo">
+          Conheça os projetos da Feira de Ciências e Tecnologia 2026 desenvolvidos pelas turmas da FAETEC Macaé.
+      </p>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="grid-projetos">
+
+      <!-- Card 1 -->
+      <div class="projeto-card">
+        <div class="projeto-icone">
+          <i class="fa-solid fa-solar-panel"></i>
+        </div>
+
+        <h3 class="projeto-titulo">
+          Sistema Solar Interativo
+        </h3>
+
+        <p class="projeto-curso">
+          Técnico MSI
+        </p>
+
+        <p class="projeto-descricao">
+          Modelo interativo com simulação dos planetas.
+        </p>
+
+        <a href="projetos-temporario.html" class="projetos-btn">
+          Ver projeto →
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="projeto-card">
+        <div class="projeto-icone">
+          <i class="fa-solid fa-truck"></i>
+        </div>
+
+        <h3 class="projeto-titulo">
+          Rotas Inteligentes
+        </h3>
+
+        <p class="projeto-curso">
+          Técnico Logística
+        </p>
+
+        <p class="projeto-descricao">
+          Otimização de transporte e distribuição.
+        </p>
+
+        <a href="projetos-temporario.html" class="projetos-btn">
+          Ver projeto →
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="projeto-card">
+        <div class="projeto-icone">
+          <i class="fa-solid fa-house"></i>
+        </div>
+
+        <h3 class="projeto-titulo">
+          Casa Sustentável
+        </h3>
+
+        <p class="projeto-curso">
+          Técnico Edificações
+        </p>
+
+        <p class="projeto-descricao">
+          Protótipo sustentável.
+        </p>
+
+        <a href="projetos-temporario.html" class="projetos-btn">
+          Ver projeto →
+        </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="projeto-card">
+        <div class="projeto-icone">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+
+        <h3 class="projeto-titulo">
+          Robô Programável
+        </h3>
+
+        <p class="projeto-curso">
+          Cursos FIC
+        </p>
+
+        <p class="projeto-descricao">
+          Automação e programação aplicada.
+        </p>
+
+        <a href="projetos-temporario.html" class="projetos-btn">
+          Ver projeto →
+        </a>
       </div>
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Técnico Edificações</div><br><br>
-        <div style="color:black">À Definir </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Técnico Logística</div><br><br>
-        <div style="color:black">À Definir </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Cursos FIC</div><br><br>
-       <div style="color:black">À Definir </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
-        <img src="/w3images/house2.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
-        <img src="/w3images/house5.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
-        <img src="/w3images/house4.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
-        <img src="/w3images/house3.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact Section -->
-<div class="w3-container w3-padding-32" id="contact">
-  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
-    Contato
-  </h3>
-
-  <p>Fale conosco pelo WhatsApp.</p>
-
-  <form onsubmit="enviarWhats(event)">
-    
-    <input class="w3-input w3-border"
-      type="text"
-      id="nome"
-      placeholder="Nome"
-      required>
-
-    <input class="w3-input w3-section w3-border"
-      type="email"
-      id="email"
-      placeholder="Numero"
-      required>
-
-   
-    <input class="w3-input w3-section w3-border"
-      type="text"
-      id="mensagem"
-      placeholder="Mensagem"
-      required>
-
-    <button class="w3-button w3-black w3-section" type="submit">
-      ENVIAR NO WHATSAPP
-    </button>
-
-  </form>
-</div>
-
-<script>
-function enviarWhats(event) {
-  event.preventDefault();
-
-  let nome = document.getElementById("nome").value;
-  let email = document.getElementById("email").value;
-  let mensagem = document.getElementById("mensagem").value;
-
-  let texto =
-`Olá, vim pelo site!
-
-Nome: ${nome}
-Email: ${email}
-Mensagem: ${mensagem}`;
-
-  let numero = "5522998884900";
-
-  let url = "https://wa.me/${5522998884900}?text=${encodeURIComponent(texto)}";
-
-  window.open( url, "_blank");
-}
-</script>
-  </div>
+  </section>
   
-<!-- Image of location/map -->
-<div class="w3-container">
-  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
-</div>
+  <!-- Sessão de fotos -->
+  <section id="fotos" class="w3-content galeria-section">
+    <div class="galeria-header">
+      <h2 class="galeria-titulo">
+        Galeria de Fotos
+      </h2>
 
-<!-- End page content -->
-</div>
-<h2>Enviar mensagem</h2>
+      <p class="galeria-descricao">
+        Veja os melhores momentos da Feira de Ciências e Tecnologia.
+      </p>
+    </div>
 
-<input type="text" id="nome" placeholder="Nome"><br>
-<input type="text" id="telefone" placeholder="Telefone"><br>
-<textarea id="mensagem" placeholder="Mensagem"></textarea><br>
+    <div class="galeria-wrapper">
+      <div class="galeria-card">
+        <h2>Aprendizados em Imagens</h2>
 
-<button onclick="enviar()">Enviar</button>
+        <p>
+          Uma seleção dos melhores momentos da feira.
+        </p>
 
-<script>
+        <a href="Galeria/galeria-temporaria.html" class="galeria-btn">
+          Acessar Galeria →
+        </a>
+      </div>
+    </div>
+  </section>
 
-function enviar(){
+  <!-- Sessão de contatos -->
+  <section id="contato" class="w3-content contato-section">
 
-let nome = document.getElementById("nome").value;
-let telefone = document.getElementById("telefone").value;
-let mensagem = document.getElementById("mensagem").value;
+    <div class="w3-container w3-padding-32">
 
-let texto = Nome: ${nome}%0A Telefone: ${telefone}%0A Mensagem: ${mensagem};
+      <h2 class="contato-titulo">
+        Contato
+      </h2>
 
-let url = "https://wa.me/5522992489562?text=" + texto;
+      <p class="contato-descricao">
+        Fale conosco pelo WhatsApp.
+      </p>
 
-window.open(url);
+      <form id="form-contato">
 
-}
+        <input
+          class="w3-input w3-border"
+          type="text"
+          id="nome"
+          placeholder="Nome"
+          required
+        >
 
-</script>
+        <input
+          class="w3-input w3-section w3-border"
+          type="text"
+          id="email"
+          placeholder="E-mail"
+          required
+        >
 
-<footer class="w3-center w3-black w3-padding-32">
+        <input
+          class="w3-input w3-section w3-border"
+          type="text"
+          id="mensagem"
+          placeholder="Mensagem"
+          required
+        >
 
-  <p>
-    <i class="fas fa-map-marker-alt"></i>
-    <a href="https://www.google.com/maps/search/?api=1&amp;query=1184+Av.+Aluizio+da+Silva+Gomes,+Maca%C3%A9+-+RJ" target="_blank" class="w3-text-white">
-      Av. Aluizio da Silva Gomes, s/n - Glória, Macaé - RJ
-    </a>
-  </p>
+        <button type="submit">
+          ENVIAR NO WHATSAPP
+        </button>
 
-  <p>
-    <a href="https://www.instagram.com/faetecmacaeoficial/" target="_blank" class="w3-button">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
+      </form>
 
-    <a href="https://www.facebook.com/cvtmacae/?locale=pt_BR" target="_blank" class="w3-button">
-      <i class="fab fa-facebook"></i> Facebook
-    </a>
+    </div>
 
-    <a href="https://wa.me/5522998884900?text=Olá,%20vim%20pelo%20site%20da%20Feira%20de%20Ciências%202026" target="_blank" class="w3-button">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-  </p>
+  </section>
 
-  <hr style="opacity:0.2">
+  <!-- Sessão do rodapé -->
+  <footer class="footer">
+    <p>
+      <i class="fas fa-map-marker-alt"></i>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=1184+Av.+Aluizio+da+Silva+Gomes,+Maca%C3%A9+-+RJ" target="_blank" class="footer-link">
+        Av. Aluizio da Silva Gomes, s/n - Glória, Macaé - RJ
+      </a>
+    </p>
 
-  <p style="font-size:14px">
-    <i class="fas fa-users"></i> Créditos do site:<br>
-    Savio • Diego • Valerio • Ytalo • Mateus
-  </p>
+    <p>
+      <a href="https://www.instagram.com/faetecmacaeoficial/" target="_blank" class="social-button">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
 
-</footer>
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
- 
+      <a href="https://www.facebook.com/redefaetec/?locale=pt_BR" target="_blank" class="social-button">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+
+      <a href="https://wa.me/5522998884900?text=Olá,%20vim%20pelo%20site%20da%20Feira%20de%20Ciências%202026" target="_blank" class="social-button">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </p>
+
+    <hr class="footer-divider">
+
+    <p class="footer-credits">
+      <i class="fas fa-users"></i> Créditos do site:<br>
+      Savio • Diego • Valerio • Ytalo • Mateus
+    </p>
+  </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>

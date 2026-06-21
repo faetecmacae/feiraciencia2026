@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria | Feira de Ciências Fatec - 2026</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#fff;
+            padding:40px 20px;
+        }
+
+        .container{
+            max-width:1000px;
+            width:100%;
+            text-align:center;
+        }
+
+        .titulo{
+            margin-top:10px;
+            font-size:42px;
+            color:#5b21b6;
+        }
+
+        .titulo::after{
+            content:"";
+            display:block;
+            width:120px;
+            height:4px;
+            background:#c026d3;
+            margin:15px auto 0;
+            border-radius:10px;
+        }
+
+        .texto{
+            max-width:700px;
+            margin:25px auto;
+            font-size:20px;
+            line-height:1.7;
+            color:#444;
+        }
+
+        .destaque{
+            color:#c026d3;
+            font-weight:bold;
+        }
+
+        .botao{
+            display:inline-block;
+            margin-top:15px;
+            background:#444;
+            color:#fff;
+            padding:10px 18px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:bold;
+            transition:all .3s ease;
+        }
+
+        .botao:hover{
+            transform:translateY(-2px);
+            box-shadow:0 10px 20px rgba(0,0,0,.20);
+        }
+
+        @media(max-width:768px){
+
+            .titulo{
+                font-size:30px;
+            }
+
+            .texto{
+                font-size:18px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="titulo">
+            📸 Galeria em Construção
+        </h1>
+
+        <p class="texto">
+            Ainda não possuímos fotos da <span class="destaque">Feira de Ciências e Tecnologia 2026.</span>
+            Nossa equipe está preparando uma galeria especial para registrar
+            todos os projetos, apresentações e momentos incríveis do evento.
+        </p>
+
+        <a href="../index.html" class="botao">
+            Voltar ao Site da Feira
+        </a>
+
+    </div>
+
+</body>
+</html>

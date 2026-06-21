@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="style-galeria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Galeria | Feira de Ciências Fatec - 2026</title>
+</head>
+<body>
+
+    <!-- Sessão de navegação do site -->
+    <section class="navbar-container">
+        <div class="navbar">
+
+            <img src="../imagem/logoFaetec.png" alt="Logo" width="150">
+
+            <!-- MENU DESKTOP -->
+            <div class="menu-desktop">
+                <a href="../index.html">Início</a>
+            </div>
+
+            <!-- BOTÃO HAMBÚRGUER -->
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        </div>
+
+        <!-- MENU MOBILE -->
+        <div id="menuMobile" class="menu-mobile">
+            <a href="../index.html" onclick="toggleMenu()">Início</a>
+        </div>
+    </section>
+ 
+    
+    <!-- Sessão das fotos -->
+    <section class="galeria-section">
+
+        <div class="galeria-container">
+            <h2 class="galeria-title">
+                Galeria da Feira de Ciências
+            </h2>
+
+            <p class="galeria-subtitle">
+                Fotos e vídeos dos projetos, apresentações e experiências da feira.
+            </p>
+
+            <div class="galeria-grid">
+
+                <!-- Foto 1 -->
+                <div class="galeria-item">
+                    <img src="fotos feira/img1.jpeg" alt="Projeto 1">
+                    <div class="galeria-legenda">Projeto 1</div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="galeria-item">
+                    <img src="fotos feira/img2.jpeg" alt="Projeto 2">
+                    <div class="galeria-legenda">Projeto 2</div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="galeria-item">
+                    <img src="fotos feira/img3.jpeg" alt="Projeto 3">
+                    <div class="galeria-legenda">Projeto 3</div>
+                </div>
+
+                <!-- Vídeo -->
+                <div class="galeria-item">
+                    <video controls>
+                        <source src="fotos feira/vid1.mp4" type="video/mp4">
+                    </video>
+                    <div class="galeria-legenda">Apresentação dos Projetos</div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="galeria-item">
+                    <img src="fotos feira/img4.jpeg" alt="Projeto 4">
+                    <div class="galeria-legenda">Exposição Científica</div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="galeria-item">
+                    <img src="fotos feira/img6.jpeg" alt="Projeto 5">
+                    <div class="galeria-legenda">Premiação</div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    
+    <script src="script-galeria.js"></script>
+</body>
+</html>
+        

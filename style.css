@@ -1,0 +1,589 @@
+/* Transição para deslizar na página ao clicar no menu de navegação */
+html {
+  scroll-behavior: smooth;
+}
+
+/*============================================================================================================*/
+
+/*estilo abaixo se refere ao menu de navegação mobile e desktop*/
+.navbar-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+      
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+      
+    
+/* MENU DESKTOP */
+.menu-desktop a{
+  text-decoration: none;
+  color: #000;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+/* hover desktop */
+.menu-desktop a:hover{
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  color: black;
+}
+
+/* MENU MOBILE */
+.menu-mobile a{
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #eee;
+  transition: all 0.25s ease;
+}
+
+/* hover mobile */
+.menu-mobile a:hover{
+  background: #f5f5f5;
+  color: #0077ff;
+  padding-left: 25px;
+}
+      
+/* BOTÃO HAMBURGUER */
+.menu-btn{
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+      
+/* MENU MOBILE */
+.menu-mobile{
+  display: none;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+      
+.menu-mobile a{
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+      
+.menu-mobile.show{
+  display: block;
+}
+      
+/* RESPONSIVO */
+@media (max-width: 900px){
+  .menu-desktop{
+    display: none;
+  }
+        
+  .menu-btn{
+    display: block;
+  }
+}
+      
+/* EVITA QUE O MENU FIXO CUBRA AS SEÇÕES AO CLICAR */
+section{
+  scroll-margin-top: 90px;
+}
+
+/*============================================================================================================*/
+
+/*Estilo abaixo se refere ao header do site, foto + data que acontecerá a feira*/
+.header-evento {
+  scroll-margin-top: 45px;
+  max-width: 1500px;
+}
+
+.imagem-evento {
+  width: 1500;
+  height: 800;
+  margin-top: 115px;
+}
+
+.conteudo-evento {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.titulo-evento {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.data-evento {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.formulario-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #444;
+  color: #fff;
+  padding: 25px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.formulario-btn:hover {
+  background: #333;
+}
+
+/* Estilo abaixo se refere ao sessão do sobre */
+
+/* Seção */
+.secao-sobre {
+  scroll-margin-top: 45px;
+  max-width: 1564px;
+}
+
+/* Título */
+.titulo-secao {
+  font-weight: 500;
+}
+
+/* Imagens das cientistas */
+.cientista-img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Botão */
+.btn-saiba-mais {
+  width: 100%;
+  border: none;
+  background-color: #f1f1f1;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.btn-saiba-mais:hover {
+  background-color: #d9d9d9;
+}
+
+/*============================================================================================================*/
+
+/* Estilo abaixo se refere ao sessão de programação */
+
+/* Seção */
+.programacao-section {
+  max-width: 1564px;
+  scroll-margin-top: 40px;
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+/* Cabeçalho */
+.programacao-cabecalho {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.programacao-titulo {
+  font-size: 24px;
+  color: #222;
+  text-align: left;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 16px 0;
+  margin: 0 0 10px 0;
+}
+
+.programacao-subtitulo {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+  text-align: left;
+}
+
+/* Container */
+.programacao-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.programacao-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Cards */
+.programacao-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.programacao-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Ícones */
+.programacao-icone {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Título do card */
+.programacao-card-titulo {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Horário */
+.programacao-horario {
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .programacao-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .programacao-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*============================================================================================================*/
+
+/* Estilo abaixo se refere ao sessão de de projetos */
+.projetos-section {
+  max-width: 1564px;
+  scroll-margin-top: 45px;
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+/* Cabeçalho */
+.projetos-cabecalho {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.projetos-titulo {
+  font-size: 24px;
+  color: #222;
+  text-align: left;
+  font-weight: 400;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 16px 0;
+  margin: 0 0 10px 0;
+}
+
+.projetos-subtitulo {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+  text-align: left;
+}
+
+/* Grid */
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.projeto-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Ícone */
+.projeto-icone {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Título */
+.projeto-titulo {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Curso */
+.projeto-curso {
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Descrição */
+.projeto-descricao {
+  color: #555;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Botão */
+.projetos-btn {
+  display: inline-block;
+  margin-top: auto;
+  align-self: flex-start;
+  background: #444;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.projetos-btn:hover {
+  background: #222;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .grid-projetos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-projetos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*============================================================================================================*/
+
+/* Estilo abaixo se refere ao sessão de fotos */
+/* Configurações gerais */
+.galeria-section,
+.galeria-section * {
+  font-family: Verdana, sans-serif;
+}
+
+.galeria-section {
+  max-width: 1564px;
+  scroll-margin-top: 100px;
+  padding: 0 20px;
+  background: #ffffff;
+}
+
+/* Cabeçalho */
+.galeria-header {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.galeria-titulo {
+  font-size: 24px;
+  color: #222;
+  text-align: left;
+  font-weight: 400;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 16px 0;
+  margin: 0 0 10px 0;
+}
+
+.galeria-descricao {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+  text-align: left;
+}
+
+/* Área central */
+.galeria-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+/* Card */
+.galeria-card {
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+.galeria-card h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #222;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 12px;
+}
+
+.galeria-card p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* Botão */
+.galeria-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #444;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.galeria-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .galeria-titulo {
+   font-size: 24px;
+  }
+
+  .galeria-card {
+    padding: 30px 20px;
+  }
+
+  .galeria-card h2 {
+    font-size: 24px;
+  }
+}
+
+/*============================================================================================================*/
+
+/* Estilo abaixo se refere ao sessão de contatos */
+.contato-section {
+  max-width: 1564px;
+  padding: 0 20px;
+  background: #ffffff;
+}
+
+.contato-titulo {
+  font-size: 24px;
+  color: #222;
+  text-align: left;
+  font-weight: 400;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 16px 0;
+  margin: 0 0 10px 0;
+}
+
+.contato-descricao {
+  color: #666;
+  font-size: 16px;
+  text-align: left;
+}
+
+#form-contato input {
+  border-radius: 4px;
+}
+
+#form-contato button {
+  display: inline-block;
+  margin-top: 15px;
+  background: #444;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#form-contato button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+/*============================================================================================================*/
+
+/* Estilo abaixo se refere ao sessão do rodapé */
+.footer {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 32px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.social-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer-divider {
+  opacity: 0.2;
+  margin: 20px 0;
+}
+
+.footer-credits {
+  font-size: 14px;
+}
